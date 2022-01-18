@@ -1,7 +1,7 @@
-#include "DataStore.h"
+#include "DataStore.hpp"
 
 // Create films map
-std::map<string, json> films { {"2", {"title", "the matrix"}}, {"1", {"title", "pulp fiction"}}, {"3", {"title", "gremlins"}} };
+std::map<char *, json> films { {"2", {"title", "the matrix"}}, {"1", {"title", "pulp fiction"}}, {"3", {"title", "gremlins"}} };
 //json j_films(films);
 
 // Print films map
@@ -12,18 +12,18 @@ void print() {
     }
 }
 
-void insert(string key, json value ) {
+void insert(char *key, json value ) {
     films.insert(make_pair(key, value));
 }
 
-void del(string key) {
+void del(char *key) {
     films.erase(key);
 }
 
-void update(string key, json value) {
+void update(char *key, json value) {
     films[key] = value;
 }
 
-json search(string key) {
+json search(char *key) {
     return films[key];
 }

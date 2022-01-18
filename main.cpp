@@ -1,5 +1,5 @@
 #include <iostream>
-#include "DataStore.h"
+#include "DataStore.hpp"
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     print();
     update("4", {"title", "Back to the future"});
     print();
-    cout << "Key 1: " << search("1") << "\n";
+    std::cout << "Key 1: " << search("1") << "\n";
 
     // Error cases currently not trapped
     del("20");

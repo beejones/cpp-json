@@ -3,7 +3,7 @@ CC=g++
 CFLAGS = -Wall -Wextra `pkg-config nlohmann_json --cflags`
 #CFLAGS += $(shell pkg-config --cflags json-c)
 #LDFLAGS += $(shell pkg-config --libs json-c)
-DEPS = DataStore.h
+DEPS = DataStore.hpp
 
 # The build target 
 TARGET = main
