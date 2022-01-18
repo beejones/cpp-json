@@ -7,3 +7,7 @@ Experimenting with json in c++
 sudo apt-get install -y nlohmann-json3-dev
 ```
 
+# Build and run
+```
+make && main
+```
