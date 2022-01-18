@@ -7,6 +7,8 @@ using namespace std;
 using json = nlohmann::json;
 
 extern void print();
-extern void add(string, json);
-
+extern void insert(string, json);
+extern void del(string key); 
+extern void update(string key, json value);
+extern json search(string key);
 #endif

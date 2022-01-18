@@ -6,12 +6,24 @@ std::map<string, json> films { {"2", {"title", "the matrix"}}, {"1", {"title", "
 
 // Print films map
 void print() {
+    std::cout << "----------------------------\n";
     for (auto it = films.begin(); it != films.end(); ++it) {
         std::cout << it->first << " : " << it->second << "\n";
     }
 }
 
-void add(string key, json value ) {
+void insert(string key, json value ) {
     films.insert(make_pair(key, value));
-    //j_films.push_back((pair<string,string>)make_pair(key, value));
+}
+
+void del(string key) {
+    films.erase(key);
+}
+
+void update(string key, json value) {
+    films[key] = value;
+}
+
+json search(string key) {
+    return films[key];
 }
